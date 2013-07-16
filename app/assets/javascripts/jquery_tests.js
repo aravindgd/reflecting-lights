@@ -2,7 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function(){
-$("#cl").click(function(){
-alert("HELLO WORLD!");
-});
+ $("#flag").html("Hello World !! (display due to jQuery)");
 });
