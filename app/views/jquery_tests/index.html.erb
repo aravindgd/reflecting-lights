@@ -1,0 +1,32 @@
+<h1>Listing jquery_tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jquery_tests.each do |jquery_test| %>
+      <tr>
+        <td><%= link_to 'Show', jquery_test %></td>
+        <td><%= link_to 'Edit', edit_jquery_test_path(jquery_test) %></td>
+        <td><%= link_to 'Destroy', jquery_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jquery test', new_jquery_test_path %>
+ <button id="cl">Click Me</button>
+<h1>
+        Show/Hide using jQuery</h1>
+    <a id="showhidetrigger" href="#">show/hide</a>
+    <div id="showhidetarget">
+        This is the box that is hidden and shown.
+    </div>

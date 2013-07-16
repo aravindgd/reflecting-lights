@@ -1,0 +1,2 @@
+module JqueryTestsHelper
+end
