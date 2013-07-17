@@ -77,4 +77,23 @@ Ud::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  client = Dalli::Client.new
+config.action_dispatch.rack_cache = {
+  :metastore    => client,
+  :entitystore  => client,
+  :allow_reload => false
+}
+
+
+config.serve_static_assets = true
+
+
+
+config.static_cache_control = "public, max-age=2592000"
+
+
+
+config.assets.digest = true
+
+config.action_controller.perform_caching = true
 end
